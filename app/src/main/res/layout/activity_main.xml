@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    android:padding="25dp"
+    android:background="@drawable/grey_background">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="37dp"
+        android:layoutDirection="ltr"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/tipAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amount">
+
+        <TextView
+            android:id="@+id/tipText"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="25sp" />
+
+        <SeekBar
+            android:id="@+id/tipPercent"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="44dp"
+            app:layout_constraintBottom_toTopOf="@+id/tipAmount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amount"
+            app:layout_constraintVertical_bias="0.705"
+            android:progressTint="#f00"
+            android:progressBackgroundTint="#000" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="325dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="41dp"
+        android:layout_marginTop="130dp"
+        android:ems="10"
+        android:hint="Bill Amount"
+        android:cursorVisible="false"
+        android:textAlignment="gravity"
+        android:inputType="numberDecimal"
+        android:background="@drawable/underline"
+        android:padding="10dp"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="82dp"
+        android:padding="10dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipAmount" />
+
+    <TextView
+        android:id="@+id/tipAmount"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="30dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/total"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+</android.support.constraint.ConstraintLayout>

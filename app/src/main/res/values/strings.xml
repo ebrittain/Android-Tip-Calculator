@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Tip Calculator</string>
+    <string name="title_activity_number_calculator">NumberCalculator</string>
+</resources>
